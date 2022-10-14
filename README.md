@@ -47,8 +47,7 @@ int main()
     }
 }
 ```
-## step01-3
-最大公因數-暴力法
+## step01-3_最大公因數-暴力法
 ```cpp
 #include <stdio.h>
 int main()
@@ -62,8 +61,7 @@ int main()
     printf("找到ans:%d",ans);
 }
 ```
-## step01-4
-輾轉相除法
+## step01-4_輾轉相除法
 ```cpp
 #include <stdio.h>
 int main()
