@@ -119,7 +119,7 @@ int main()
 	}
 }
 ```
-## step01-1_int整數型別
+## step01-1_各種型別 long long int,
 int整數型別, 只有32-bit,最多只能裝2,147,483,647, 所以很長很長的整數, 要用 long long int
 ```cpp
 #include <stdio.h>
@@ -131,7 +131,7 @@ int main()
     printf("%lld",a);
 }
 ```
-## step01-2_最大公因數(輾轉相除法)
+## step01-2_複習最大公因數
 有了long long int 那我們便能回來複習最大公因數了。數字範圍再大一點, 結果要算好久。讀寫資料時要用%lld 是小寫的LLD,不是數字11d哦
 ```cpp
 #include <stdio.h>
@@ -145,4 +145,25 @@ int main()
     }
     printf("答案是:%lld\n",ans);
 }
+```
+輾轉相除法
+```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a,b,c;
+    scanf("%lld %lld",&a,&b);
+
+    while(1){
+        c=a%b;
+        printf("%lld %lld %lld\n",a,b,c);
+        if(c==0) break;
+        a=b;
+        b=c;
+    }
+    printf("答案是:%lld\n",b);
+}
+```
+## step01-3_十進位轉2進位(剝皮法)
+```
 ```
