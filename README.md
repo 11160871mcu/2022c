@@ -166,5 +166,14 @@ int main()
 }
 ```
 ## step01-3_十進位轉2進位(剝皮法)
-```
+```cpp
+#include <stdio.h>
+int main(){
+    int n=123456789;
+
+    while(n>0){
+        printf("個位數是%d\n",n%10);
+        n=n/10;
+    }
+}
 ```
