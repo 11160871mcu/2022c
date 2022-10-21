@@ -3,8 +3,7 @@
 
 # week06
 
-## step01-0
-考九九乘法表
+## step01-0_考九九乘法表
 ```cpp
 #include <stdio.h>
 int main()
@@ -102,3 +101,19 @@ int main()
 # week06
 
 ## step01-1 畫出金字塔
+自訂行數
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	for (int i=1;i<=n;i++){
+		for (int k=0;k<n-i;k++){
+			printf(" ");
+		}
+		for (int k=0;k<i*2-1;k++){
+			printf("*");
+		}
+		printf("\n");
+	}
+}
