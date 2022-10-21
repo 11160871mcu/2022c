@@ -100,7 +100,7 @@ int main()
 ```
 # week06
 
-## step01-1 畫出金字塔
+## step01-0_畫出金字塔
 自訂行數
 ```cpp
 #include <stdio.h>
@@ -117,5 +117,32 @@ int main()
 		}
 	printf("\n");
 	}
+}
+```
+## step01-1_int整數型別
+int整數型別, 只有32-bit,最多只能裝2,147,483,647, 所以很長很長的整數, 要用 long long int
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n=1234567812345678;
+    printf("%d",n);
+    long long int a=1234567812345678;
+    printf("%lld",a);
+}
+```
+## step01-2_最大公因數(輾轉相除法)
+有了long long int 那我們便能回來複習最大公因數了。數字範圍再大一點, 結果要算好久。讀寫資料時要用%lld 是小寫的LLD,不是數字11d哦
+```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a,b;
+    scanf("%lld %lld",&a,&b);
+    long long int ans;
+    for(long long int i=1;i<=a;i++){
+        if(a%i==0 && b%i==0) ans=i;
+    }
+    printf("答案是:%lld\n",ans);
 }
 ```
