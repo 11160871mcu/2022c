@@ -102,7 +102,7 @@ int main()
 
 ## step01-1 畫出金字塔
 自訂行數
-'''cpp
+```cpp
 #include <stdio.h>
 int main()
 {
@@ -118,4 +118,4 @@ int main()
 		printf("\n");
 	}
 }
-'''
+```
