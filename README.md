@@ -132,7 +132,8 @@ int main()
 }
 ```
 ## step01-2_複習最大公因數
-有了long long int 那我們便能回來複習最大公因數了。數字範圍再大一點, 結果要算好久。讀寫資料時要用%lld 是小寫的LLD,不是數字11d哦
+### 有了long long int 那我們便能回來複習最大公因數了。數字範圍再大一點, 結果要算好久。讀寫資料時要用%lld 是小寫的LLD,不是數字11d哦
+暴力法
 ```cpp
 #include <stdio.h>
 int main()
