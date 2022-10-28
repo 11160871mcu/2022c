@@ -211,7 +211,7 @@ int main()
     }
 }
 ```
-## step01-2_2個while迴圈, 去寫出有空格、有星星的直角三角形
+## step02-1_2個while迴圈, 去寫出有空格、有星星的直角三角形
 用了2個for迴圈來改寫
 ```cpp
 #include <stdio.h>
@@ -230,6 +230,39 @@ int main()
         }
         printf("\n");
         i++;
+    }
+}
+```
+## step02-2_質數判別
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("要判斷你輸入的數字是不是孤獨的質數:");
+    int n;
+    scanf("%d",&n);
+
+    int bad=0;
+    for(int i=2;i<n;i++){
+        if( n%i==0 ) bad=1;
+    }
+    if(bad==0) printf("%d 是質數(沒有壞掉)",n);
+    else printf("%d 不是質數(早就壞掉了)",n);
+}
+```
+## step02-3_輸出數字的質因數
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    for(int n=2;n<=a;n++){
+        int bad=0;
+        for(int i=2;i<n;i++){
+            if( n%i==0 ) bad=1;
+        }
+        if(bad==0) printf("%d ",n);
     }
 }
 ```
