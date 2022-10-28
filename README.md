@@ -177,3 +177,20 @@ int main(){
     }
 }
 ```
+# week08
+## step01-0_找出最大公因數-輾轉相除法
+```cpp
+#include <stdio.h>
+int main()
+{
+	int a,b,c;
+	scanf("%d%d",&a,&b);
+	while(1){
+		c=a%b;
+		if(c==0) break;
+		a=b;
+		b=c;
+	}
+	printf("%d",b);
+}
+```
