@@ -194,3 +194,20 @@ int main()
 	printf("%d",b);
 }
 ```
+## step01-1_ 2個 while迴圈 來畫出直角三角形
+口訣是先能畫出正方形。再來的關鍵, 是空格有幾個。空格有n-i個。所以 把 if寫出來, 成立時印空格, else印星星
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int k=1;k<=n;k++){
+            if( k<=n-i ) printf(" ");
+            else printf("*");
+        }
+        printf("\n");
+    }
+}
+```
