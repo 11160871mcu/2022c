@@ -331,4 +331,24 @@ int main()
     printf("a:%d b:%d c:%d\n",a,b,c);
 }
 ```
-## step
+## step02-1_3數排序,口訣「從左到右巡一輪,兩兩比較,不對就交換」
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[10]={90,80,70,60,50,40,30,20,10,0};
+
+    for(int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for(int i=0;i<10-1;i++){
+        int temp=a[i];
+        a[i]=a[i+1];
+        a[i+1]=temp;
+    }
+
+    for(int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+}
+
+```
