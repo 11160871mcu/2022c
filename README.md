@@ -342,13 +342,83 @@ int main()
     printf("\n");
 
     for(int i=0;i<10-1;i++){
-        int temp=a[i];
-        a[i]=a[i+1];
-        a[i+1]=temp;
+        if(a[i]>a[i+1]){
+            int temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+        }
     }
 
     for(int i=0;i<10;i++) printf("%d ",a[i]);
     printf("\n");
+}
+
+```
+## step02-2_前面的程式,只把「最肥的數字」移到右邊,因此,我們就用 Ctrl-C 的方法 貼很多次, 並逐一印出來
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[10]={90,80,70,60,50,40,30,20,10,0};
+
+    for(int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for(int i=0;i<10-1;i++){
+        if(a[i]>a[i+1]){
+            int temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+        }
+    }
+    for(int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for(int i=0;i<10-1;i++){
+        if(a[i]>a[i+1]){
+            int temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+        }
+    }
+    for(int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for(int i=0;i<10-1;i++){
+        if(a[i]>a[i+1]){
+            int temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+        }
+    }
+    for(int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+}
+
+```
+
+## step03-1_泡泡排序法,其實就是把剛剛的程式,重覆做很多次。因為是重覆的程式碼, 所以不需要 Ctrl-C 來複製, 而是直接用 for(int k=0; k小於「重覆的次數」; k++){ } 來重覆做。就這樣完成了泡泡排序法, 邊排邊做, 會看到「大泡泡會先到最右邊」,接著越來越多排好。10個數字,只要重覆10-1次, 因為「頒獎時,前9人知道, 最後一個也就出現了」
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[10]={90,80,70,60,50,40,30,20,10,0};
+
+    for(int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for(int k=0;k<10-1;k++){
+
+        for(int i=0;i<10-1;i++){
+            if(a[i]>a[i+1]){
+                int temp=a[i];
+                a[i]=a[i+1];
+                a[i+1]=temp;
+            }
+        }
+        for(int i=0;i<10;i++) printf("%d ",a[i]);
+        printf("\n");
+    }
 }
 
 ```
