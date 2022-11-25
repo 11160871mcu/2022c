@@ -443,3 +443,64 @@ int main()
     }
 }
 ```
+## step02-2_從簡單的整數宣告、整數宣告並給初始值、陣列宣告、陣列宣告並給初始值、二維陣列宣告、二維陣列宣告並初始值, 小心右邊給值時, 是用大括號哦
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a;
+    int b=10;
+    int c[3];
+    int d[3]={10,20,30};
+    int g[2][3];
+    int h[2][3]={{10,20,30},{40,50,60}};
+}
+```
+## step02_2_接下來,把二維陣列拿來用, 配合2層迴圈,超完美。口訣還是「左手i、右手j
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[2][3]={{10,20,30},{40,50,60}};
+    for(int i=0;i<2;i++){
+        for(int j=0;j<3;j++){
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+}
+```
+## step03-1_「矩陣加法」也就是典型的 二層迴圈+陣列, 口訣還是左手i右手j
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[10][10],b[10][10],c[10][10];
+    int n;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            scanf("%d",&b[i][j]);
+        }
+    }
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            c[i][j]=a[i][j]+b[i][j];
+        }
+    }
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            printf("%3d  ",c[i][j]);
+        }
+        printf("\n");
+    }
+}
+```
