@@ -267,7 +267,7 @@ int main()
 }
 ```
 # week10
-# step01-1_陣列宣告
+## step01-1_陣列宣告
 ```cpp
 #include <stdio.h>
 int main()
@@ -279,7 +279,7 @@ int main()
     printf("a[3]:%d\n",a[3]);
 }
 ```
-# step02-1_陣列正著印、倒著印
+## step02-1_陣列正著印、倒著印
 ```cpp
 #include <stdio.h>
 int main()
