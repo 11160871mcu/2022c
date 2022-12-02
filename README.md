@@ -565,4 +565,56 @@ int main()
 	printf("最大利潤=%d-%d=%d\n",max,min,ans);
 }
 ```
-## step
+## step02-1_Fibonacci數列,重點就是 a[i] = a[i-1] + a[i-2]; 接著for迴圈要從2開始, 不然a[i-2]會有負數在裡面而出錯。在 a[0] a[1] 也要先手動填好。最後全部印出來(不要印太多, 不然會overflow爆炸)
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[50];
+    a[0]=0;
+    a[1]=1;
+
+    for(int i=2;i<45;i++){
+        a[i]=a[i-1]+a[i-2];
+    }
+
+    for(int i=0;i<45;i++){
+        printf("%d ",a[i]);
+    }
+}
+```
+## step02-3_矩陣轉180度
+```cpp
+#include <stdio.h>
+int a[200][200];
+int main()
+{
+    int n,m;
+    scanf("%d%d",&n,&m);
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("\n");
+    for(int i=n-1;i>=0;i--){
+        for(int j=m-1;j>=0;j--){
+            printf("%2d ",a[i][j]);
+        }
+        printf("\n");
+    }
+}
+```
+## step03-1_function函式, int addnum(int a, int b){return a+b;} 在第一行,要return出來的形狀, 也要有送進去的形狀,不能省略。用的時候就簡單給數字進去就好了
+```cpp
+#include <stdio.h>
+int addnum(int a,int b)
+{
+    return a+b;
+}
+int main()
+{
+    int ans=addnum(2,3);
+    printf("addnum(2,3)會得到 %d\n",ans);
+}
+```
