@@ -655,3 +655,28 @@ int main()
     printf("main()中 a是:%d\n",a);
 }
 ```
+## step02-1_函式的參數傳遞時, 請用上週教過的「教室有門,上面用透明膠膜封起來,有標籤int n」進來的數值20, 就會 int a=20 的意思。變數的名字,在不同的函式裡可能會弄混,要小心一下
+```cpp
+#include <stdio.h>
+int n=30;
+int funcA(int a,int b)
+{
+    printf("funcA()的a,b是:%d %d\n",a,b);
+    return a + b;
+}
+
+int funcB(int n)
+{
+    printf("funcB()的n是:%d\n",n);
+    int ans = funcA(n,n);
+    return ans;
+}
+
+int main()
+{
+    int a=10,b=20;
+    funcB(b);
+    funcA(a,b);
+    printf("main()的a,b是:%d %d\n",a,b);
+}
+```
