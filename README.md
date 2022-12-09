@@ -680,6 +680,27 @@ int main()
     printf("main()的a,b是:%d %d\n",a,b);
 }
 ```
+## step02-2_複習最大公因數,輾轉相除法, 利用 while迴圈來做, 重點是老大a, 老二b, 算出老三c=a%b。如果c==0, 那老二就是答案
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a,b,c;
+    scanf("%d %d",&a,&b);
+
+    while(1){
+        c=a%b;
+        printf("%d %d %d\n",a,b,c);
+
+        if(c==0) break;
+
+        a=b;
+        b=c;
+    }
+    printf("%d",b);
+}
+```
+
 ## step02-3_利用函式呼叫函式的方式, 來計算「輾轉相除法」,
 ### 使用我們自己定義的 int gcd(int a, int b) 裡面如果a是0,b是答案。如果b是0,a是答案。如果都不是, 那就再請 gcd出馬, 計算 gcd(b, a%b) 的結果 return 回去
 ```cpp
