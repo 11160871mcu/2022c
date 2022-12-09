@@ -680,3 +680,25 @@ int main()
     printf("main()的a,b是:%d %d\n",a,b);
 }
 ```
+## step02-3_利用函式呼叫函式的方式, 來計算「輾轉相除法」,
+### 使用我們自己定義的 int gcd(int a, int b) 裡面如果a是0,b是答案。如果b是0,a是答案。如果都不是, 那就再請 gcd出馬, 計算 gcd(b, a%b) 的結果 return 回去
+```cpp
+#include <stdio.h>
+
+int gcd(int a,int b)
+{
+    if(a==0) return b;
+    if(b==0)return a;
+
+    return gcd( b, a%b );
+}
+
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+
+    int ans = gcd(a,b);
+    printf("%d",ans);
+}
+```
