@@ -636,7 +636,7 @@ int main()
     printf("main()中 a是:%d\n",a);
 }
 ```
-## step01-2_在外面宣告的 int a=10; 是global變數,全世界看得到。void func() 裡宣告的 int a=20; 是 local 變數。local變數的修改,不會動到global變數。課本用小房子來介紹這個觀念, 老師則是用 C Tutor 解釋呼叫 func() 時會開複本的想法
+## step01-2_在外面宣告的 int a=10; 是global變數,全世界看得到。void func() 裡宣告的 int a=20; 是 local 變數。local變數的修改,不會動到global變數。
 ```cpp
 #include <stdio.h>
 int a=10;
