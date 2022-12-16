@@ -723,3 +723,72 @@ int main()
     printf("%d",ans);
 }
 ```
+# week15
+## step01-1_字串的宣告、宣告並定義初始值，字串在 printf()裡使用%s拿來用
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("Hello World\n");
+    char line[] = "Hello World";
+    printf("整數 %d\n",100);
+    printf("浮點數 %f\n",3.141592653589793238462643383279);
+    printf("%s 字串\n",line);
+}
+```
+## step02-1_使用 %c 及 %d 印出 65 66 67 及 97 98 99 等值, 對照 'A' 'B' 'C' 與 'a' 'b' 'c' 等, 讓大家了解 ASCII 美國國家標準資訊交換碼
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("%c : %d\n",65,65);
+    printf("%c : %d\n",66,66);
+    printf("%c : %d\n",67,67);
+    printf("%c : %d\n",'A','A');
+    printf("%c : %d\n",'B','B');
+    printf("%c : %d\n",'C','C');
+    printf("上面用數字64及單引號'a'的結果都一樣\n");
+    printf("%c : %d\n",97,97);
+    printf("%c : %d\n",'a','a');
+}
+```
+## step02-2_了解單引號(字母/字元)、及雙引號(字串、又叫字元陣列,是字元的複數)
+### 印出一些特殊符號,像跳行(反斜線n)、TAB(反斜線t)、字串結尾(反斜線0), 用單引號括起來後, 便可以印出它的值。最後, 因為字串的長度不知道是多少, 所以迴圈很難寫, 我們寫出 for(int i=0;   ; i++) 裡面用 if(line[i]==0) break; 來完成字串的迴圈
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("=%c=%d=\n",65,65);
+    printf("=%c=%d=\n",'+','+');
+    printf("=%c=%d=\n",'\n','\n');
+    printf("=%c=%d=\n",'\t','\t');
+    printf("=%c=%d=\n",'\0','\0');
+
+    char line[] = "Hello World AAA";
+    for(int i=0;   ; i++){
+        char c = line[i];
+        if( c==0 )  break;
+        printf("=%c",c);
+    }
+}
+```
+## step03-1_字串反印
+### 用到字串宣告 char line[3000];，字串利用 scanf()配合 %s 讀入 (不用加&)、字串的奇怪迴圈, 來數數有幾個字母在裡面, 也就是字串的長度。再配合之前考試教過的「百數反印」, 便能將字串反印
+```cpp
+#include <stdio.h>
+char line[3000];
+int main()
+{
+    printf("請輸入一堆字母，不要有空格喔:");
+    scanf("%s",line);
+
+    int N=0;
+    for(int i=0; line[i]!=0 ;i++){
+        N++;
+    }
+
+    for(int i=N-1; i>=0 ;i--){
+        printf("%c",line[i]);
+    }
+}
+```
