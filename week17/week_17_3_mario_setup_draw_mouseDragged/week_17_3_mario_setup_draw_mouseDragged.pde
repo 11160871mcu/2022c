@@ -1,6 +1,6 @@
 PImage jjaltoon,meow;
 void setup(){
-  size(600,600);
+  size(1800,1500);
   jjaltoon=loadImage("jjaltoon.jpg");
   meow=loadImage("meow.jpg");
 }
